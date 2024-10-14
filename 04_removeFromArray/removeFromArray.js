@@ -9,7 +9,7 @@ const removeFromArray = function(inputArray, ...rem) {
             }
         }
         if (toRemove){
-            break;
+            continue;
         }
         else{
             result.push(i);
