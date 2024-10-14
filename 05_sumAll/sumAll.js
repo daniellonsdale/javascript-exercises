@@ -8,16 +8,15 @@ const sumAll = function(firstInput, SecondInput) {
     let largerValue;
     let smallerValue;
 
-    if(firstInput > SecondInput){
-        largerValue = firstInput;
-        smallerValue = SecondInput;
-    }else if (SecondInput => firstInput){
-        largerValue = SecondInput;
-        smallerValue = firstInput;
-    }
-
-    if (firstInput >= 0 && Number.isInteger(firstInput) && SecondInput >= 0 && Number.isInteger(firstInput)){
-        for (let i = firstInput; i <= SecondInput; i++) {
+    if (firstInput >= 0 && Number.isInteger(firstInput) && SecondInput >= 0 && Number.isInteger(SecondInput)){
+        if(firstInput > SecondInput){
+            largerValue = firstInput;
+            smallerValue = SecondInput;
+        }else if (SecondInput => firstInput){
+            largerValue = SecondInput;
+            smallerValue = firstInput;
+        }
+        for (let i = smallerValue; i <= largerValue; i++) {
             sum += i;
         }
         return sum;
