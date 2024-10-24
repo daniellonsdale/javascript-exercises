@@ -20,8 +20,12 @@ const multiply = function(arr) {
   return arr.reduce((acu, cur) => acu *= cur);
 };
 
-const power = function() {
-	
+const power = function(base, expo) {
+  let acu = base;
+	for(let i = 1; i < expo; i++){
+    acu *= base;
+  }
+  return acu;
 };
 
 const factorial = function() {
