@@ -13,8 +13,11 @@ const sum = function(arr) {
 	return arr.reduce((acu, cur) => acu += cur);
 };
 
-const multiply = function() {
-
+const multiply = function(arr) {
+  if(arr.length == 0){
+    return 0;
+  }
+  return arr.reduce((acu, cur) => acu *= cur);
 };
 
 const power = function() {
